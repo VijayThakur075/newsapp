@@ -1,0 +1,7 @@
+export const SET_NEWS = "SET_NEWS";
+export const SET_TITLE = "SET_TITLE";
+export const SET_DATA = "SET_DATA";
+
+export const setNews = (payload) => ({type: SET_NEWS, payload});
+export const setTitle = (payload) => ({type: SET_TITLE, payload});
+export const setData = (payload) => ({type: SET_DATA, payload})
