@@ -6,7 +6,7 @@ import { setTitle } from "../action";
 import { useHistory } from "react-router";
 import Card from 'react-bootstrap/Card'
 import { Container, Form } from 'react-bootstrap'
-import {Button} from 'react-bootstrap'
+import { Button } from 'react-bootstrap'
 import Col from 'react-bootstrap/Col'
 import Row from 'react-bootstrap/Row'
 
@@ -39,15 +39,15 @@ const ShowNews = (props) => {
     return (
         <div>
             <h1>India tv</h1>
-                <Container>
-            <Form>
-                <Row>
-                <Col>
-                <Form.Control type="value" onChange={handleChange} placeholder="search news here...." /><br /><br />
-                </Col>
-                </Row>
-                <Button type="Button" varient="success" onClick={handleClick}>search news</Button>
-            </Form>
+            <Container>
+                <Form>
+                    <Row>
+                        <Col>
+                            <Form.Control type="value" onChange={handleChange} placeholder="search news here...." /><br /><br />
+                        </Col>
+                    </Row>
+                    <Button type="Button" varient="success" onClick={handleClick}>search news</Button>
+                </Form>
             </Container>
             {selector.map((item) =>
             (

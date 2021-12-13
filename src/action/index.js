@@ -7,5 +7,5 @@ export const UNBOOKMARK_ITEM = "UNBOOKMARK_ITEM"
 export const setNews = (payload) => ({type: SET_NEWS, payload});
 export const setTitle = (payload) => ({type: SET_TITLE, payload});
 export const setData = (payload) => ({type: SET_DATA, payload});
-export const bookmarkItem = (item) => ({type: BOOKMARK_ITEM, payloaad: item});
+export const bookmarkItem = (payload) => ({type: BOOKMARK_ITEM, payload});
 export const unBookmarkItem= (item) => ({type: UNBOOKMARK_ITEM,  payload: item});

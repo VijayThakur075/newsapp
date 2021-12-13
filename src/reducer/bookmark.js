@@ -1,22 +1,26 @@
-import { BOOKMARK_ITEM, UNBOOKMARK_ITEM } from "../action";
+import { BOOKMARK_ITEM } from "../action";
 
 const intialState = {
+
     bookmarkitem: [],
+}
+
+const getlocalStorage =  (bookmarkitem=[] )=>{
+    const item = JSON.stringify(bookmarkitem);
+    localStorage.setItem('bookmarks', item)
 }
 
 const bookmarkDescription = (state = intialState, action) => {
     switch (action.type) {
         case BOOKMARK_ITEM:
+            const bookmarkitem = [...state.bookmarkitem, action.payload]
+            getlocalStorage(bookmarkitem)
             return {
                 ...state,
-                bookmarkitem: action.payload,
+                bookmarkitem: [action.payload], ...state.bookmarkitem,
 
             };
-            case UNBOOKMARK_ITEM:
-                return {
-                    ...state,
-                   bookmarkitem: action.payload, 
-                };
+           
         default:
             return state;
 
